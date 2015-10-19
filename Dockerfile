@@ -30,8 +30,8 @@ RUN chgrp -R seleuser /home/seleuser
 RUN mkdir -p /usr/share/desktop-directories
 ADD ./scripts/ /home/root/scripts
 RUN npm install -g \
-  selenium-standalone@4.7.0 \
-  phantomjs@2.0.0 && \
+  selenium-standalone@latest \
+  phantomjs@latest && \
   selenium-standalone install
 EXPOSE 4444 5999
 ENTRYPOINT ["sh", "/home/root/scripts/start.sh"]
